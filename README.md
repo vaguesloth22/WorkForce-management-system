@@ -1,12 +1,65 @@
-# React + Vite
+# WorkForce-management-system
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A client-side employee management system built with React and styled with Tailwind CSS. This application provides role-based access for Admins and Employees, allowing for simple task assignment and tracking. All data is managed locally within the browser using `localStorage`.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   **Role-Based Authentication**: Simple login system for two user roles: Admin and Employee.
+-   **Admin Dashboard**:
+    -   View a comprehensive list of all employees.
+    -   Monitor aggregate task counts (New, Active, Completed, Failed) for each employee.
+    -   Create new tasks and assign them to specific employees.
+-   **Employee Dashboard**:
+    -   View a personalized dashboard with task statistics.
+    -   See a list of all assigned tasks, categorized by status (New, Active, Completed, Failed).
+-   **Local Data Persistence**: Uses the browser's `localStorage` to store and retrieve all application data, ensuring the state persists across sessions.
+-   **Component-Based UI**: Built with reusable React components for a modular and maintainable codebase.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+-   **Frontend**: React
+-   **Styling**: Tailwind CSS
+-   **State Management**: React Context API
+-   **Build Tool**: Vite
+
+## Getting Started
+
+Follow these instructions to get a copy of the project up and running on your local machine.
+
+### Prerequisites
+
+Make sure you have Node.js and npm (or yarn) installed.
+
+### Installation
+
+1.  **Clone the repository:**
+    ```sh
+    git clone https://github.com/your-username/WorkForce-management-system.git
+    ```
+2.  **Navigate to the project directory:**
+    ```sh
+    cd WorkForce-management-system
+    ```
+3.  **Install dependencies:**
+    ```sh
+    npm install
+    ```
+4.  **Run the development server:**
+    ```sh
+    npm run dev
+    ```
+    The application will be running on `http://localhost:5173`.
+
+## Login Credentials
+
+Use the following credentials to test the application:
+
+-   **Admin Login:**
+    -   **Email:** `admin@me.com`
+    -   **Password:** `123`
+
+-   **Employee Login (Example):**
+    -   **Email:** `e@e.com`
+    -   **Password:** `123`
+
+(Other employee credentials can be found in the `src/utils/localStorage.jsx` file.)
